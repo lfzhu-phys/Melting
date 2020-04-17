@@ -15,6 +15,7 @@ automatize the whole procedure, we have implemented the interface method into py
 The fully automatized procedure allows to efficiently and precisely predict melting points of unaries represented by arbitrary potentials with only two user-specified parameters (potential and element).
 
 To perform the automatized interface method calculations, the Jupyter notebook needs to be downloaded. The notebook can be executed after modifying the potential and element. Running directly the notebook the details of each step are automatically plotted and can be analysed retrospectively. To further simplify the application of our tool, we provide another approach. This requires an input file, which contains the two user-specified parameters, element and interatomic potential, in the following format:
+
 {
   "config": [ "pair_style eam/alloy \n",
               "pair_coeff * * potential Al\n"
@@ -23,6 +24,7 @@ To perform the automatized interface method calculations, the Jupyter notebook n
   "species": ["Al"],
   "element": "Al"
 }
+
 Here ”config” provides the LAMMPS parameters for loading the potential, ”filename” shows the location of the potential file, ”species” gives the species implemented in the potential, and ”element” defines on which material the melting point calcula- tions will be performed. The input file is in a JSON (JavaScript Object Notation) format that is easy to read and write for hu- mans and easy to parse and generate for machines. After creat- ing the input.json file, one can simply execute the protocol by using snakemake:
 
 snakemake --use-conda
