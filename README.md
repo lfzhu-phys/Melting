@@ -1,35 +1,36 @@
-#Introduction
+# Introduction
+Melting is based on the interface method and aims to fully automatically calculate the melting temperature of unaries represented by arbitrary interatomic potentials. With this approach, only two parameters, element and potential, are necessary to specify. The automated procedure is fully implemented in a pyiron-based Jupyter notebook. (http://pyiron.org).
+
+# Set up the environment
+To perform Melting, linux system is recommended. The user needs to install:
 
 
-Melting is based on the interface method and aims to fully automatically predict the melting temperature of unaries represented by arbitrary interatomic potentials. With this approach, only two parameters, element and potential, are necessary to specify. The automated procedure is realized by implementing the full simulation protocal into a pyiron-based Jupyter notebook. (http://pyiron.org).
-
-To perform Melting (linux system is recommended), the user needs:
+1) pyiron, NGLview visualization framework, and Lammps.
 
 
-1) install pyiron, NGLview visualization framework, and Lammps.
+   Guide for installation, see: https://pyiron.github.io/source/installation.html
+
+2) Ovito.
 
 
-   Guide for installation see: https://pyiron.github.io/source/installation.html
-
-2) install ovito.
-
-
-   Guide for installation see: https://anaconda.org/conda-forge/ovito
-
-In case you want to run the notebook in a terminal:
+   Guide for installation, see: https://anaconda.org/conda-forge/ovito
+   
+   
+in case you want to run the notebook in a terminal:
 
 
-3) install snakemake.
+3) snakemake.
 
 
-   Guide for installation see: https://snakemake.readthedocs.io/en/stable/getting_started/installation.html
-
-After setting up the environment, the user needs to download the Jupyter notebook to the path of the pyiron project, e.g., "~/pyiron/projects/", and go to the path. Then two approaches can be used for running the notebook.
+   Guide for installation, see: https://snakemake.readthedocs.io/en/stable/getting_started/installation.html
+# Run the notebook
+The user needs to download the Jupyter notebook to the path where the pyiron projects locate, e.g., "~/pyiron/projects/". Two approaches can be used for running the notebook.
 
 Approach 1:
-
+```python
 cd ~/pyiron/projects
 jupyter notebook
+```
 
 Open the downloaded notebook, modify the potential and element, and execute the notebook directly.
 
@@ -41,16 +42,26 @@ Use snakemake to run the notebook. This approach requires an input.json file, wh
 {
  "config":   [ "pair_style eam/alloy \n",
                "pair_coeff * * potential Al\n"],
- "filename": ["./example/potential"],
+ "filename": ["~/pyiron/projects/potential"],
  "species":  ["Al"],
  "element":  "Al"
 }
 ```
-
-After creating the input.json file, one can simply execute the protocol by using snakemake:
-
-snakemake --use-conda
-
+and a Snakefile, which is in the following format:
+```json
+rule melting:
+    input:
+        "input.json"
+    output:
+        "melting/melting.json
+    notebook:
+        "melting.ipynb"
+```
+After creating input.json and Sankefile, one can simply execute the protocol by:
+```python
+snakemake --use-conda --snakefile Snakefile --cores n
+```
 The parameters defined in the input.json file will overwrite those in the Jupyter notebook. 
 
-With both approaches, there is no need to interfere with all the computational and technical details. Theestimated melting points and predicted melting points from all loop calculations will be written in a file melting.json.
+
+With both approaches, there is no need to interfere with all the computational and technical details. The estimated melting points and predicted melting points from all loop calculations will be written in a file melting.json.
