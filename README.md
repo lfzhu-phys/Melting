@@ -16,7 +16,7 @@ To perform Melting, linux system is recommended. The user needs to install:
    Guide for installation, see: https://anaconda.org/conda-forge/ovito
    
    
-in case you want to run the notebook in a terminal:
+In case you want to run the notebook in a terminal,
 
 
 3) snakemake.
@@ -24,7 +24,7 @@ in case you want to run the notebook in a terminal:
 
    Guide for installation, see: https://snakemake.readthedocs.io/en/stable/getting_started/installation.html
 # Run the notebook
-The user needs to download the Jupyter notebook, melting.ipynb, to the path where the pyiron projects locate, e.g., "~/pyiron/projects/". Two approaches can be used for running the notebook.
+The user needs to download the Jupyter notebook, melting.ipynb, to the path where the pyiron projects locate, e.g., "~/pyiron/projects/". Two approaches can be used to run the notebook.
 
 Approach 1:
 ```python
