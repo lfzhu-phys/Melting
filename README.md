@@ -1,5 +1,5 @@
 # Introduction
-Melting is based on the interface method and aims to fully automatically calculate the melting temperature of unaries represented by arbitrary interatomic potentials. With this approach, only two parameters, element and potential, are necessary to specify. The automated procedure is fully implemented in a [pyiron](http://pyiron.org)-based Jupyter notebook and [LAMMPS](https://lammps.sandia.gov) is the engine to perform all the automatic calculations.
+Melting is based on the interface method and aims to fully automatically predict the melting temperature of unaries represented by arbitrary interatomic potentials. With this approach, only two parameters, element and potential, are necessary to specify. The automated procedure is fully implemented in a [pyiron](http://pyiron.org)-based Jupyter notebook and [LAMMPS](https://lammps.sandia.gov) is the engine to perform all the automatic calculations.
 
 # Set up the environment
 To perform Melting, linux system is recommended. The user needs to install:
