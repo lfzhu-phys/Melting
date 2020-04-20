@@ -16,7 +16,7 @@ To perform Melting, linux system is recommended. The user needs to install:
    Guide for installation, see: https://anaconda.org/conda-forge/ovito
    
    
-In case you want to run the notebook in a terminal,
+in case you want to run the notebook in a terminal,
 
 
 3) snakemake.
