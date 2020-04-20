@@ -61,6 +61,6 @@ After creating input.json and Snakefile, one can simply execute the protocol by:
 ```python
 snakemake --use-conda --snakefile Snakefile --cores n
 ```
-The parameters defined in the input.json file will overwrite those in the Jupyter notebook. With this approaches, there is no need to interfere with all the computational and technical details. 
+The parameters defined in the input.json file will overwrite those in the Jupyter notebook. With this approach, there is no need to interfere with all the computational and technical details. 
 
 Both approaches write the estimated melting points and predicted melting points from all loop calculations in a file melting.json.
