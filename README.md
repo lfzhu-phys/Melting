@@ -45,7 +45,7 @@ Use snakemake to run the notebook. This approach requires an input.json file, wh
  "Filename": ["/home/pyiron/projects/potential"],
  "Species":  ["Al"],
  "element":  "Al",
- "crystalstructure": 'Fcc'
+ "crystalstructure": "Fcc"
 }
 ```
 and a Snakefile, which is in the following format:
