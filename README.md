@@ -42,7 +42,7 @@ Use snakemake to run the notebook. This approach requires an input.json file, wh
 {
  "config":   [ "pair_style eam/alloy \n",
                "pair_coeff * * potential Al\n"],
- "filename": ["~/pyiron/projects/potential"],
+ "filename": ["/home/pyiron/projects/potential"], # an absolute path should be provided
  "species":  ["Al"],
  "element":  "Al"
 }
@@ -50,16 +50,12 @@ Use snakemake to run the notebook. This approach requires an input.json file, wh
 and a Snakefile, which is in the following format:
 ```json
 rule melting:
-    input:
-        "input.json"
-    output:
-        "melting/melting.json
     notebook:
         "melting.ipynb"
 ```
-After creating input.json and Snakefile, one can simply execute the protocol by:
+After creating input.json and Snakefile in the same path as that melting.ipynb locates, one can simply execute the protocol by:
 ```python
-snakemake --use-conda --snakefile Snakefile --cores n
+snakemake --use-conda 
 ```
 The parameters defined in the input.json file will overwrite those in the Jupyter notebook. With this approach, there is no need to interfere with all the computational and technical details. 
 
