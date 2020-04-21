@@ -40,11 +40,12 @@ Use snakemake to run the notebook. This approach requires an input.json file, wh
 
 ```json
 {
- "config":   [ "pair_style eam/alloy \n",
+ "Config":   [ "pair_style eam/alloy \n",
                "pair_coeff * * potential Al\n"],
- "filename": ["/home/pyiron/projects/potential"],
- "species":  ["Al"],
- "element":  "Al"
+ "Filename": ["/home/pyiron/projects/potential"],
+ "Species":  ["Al"],
+ "element":  "Al",
+ "crystalstructure": 'Fcc'
 }
 ```
 and a Snakefile, which is in the following format:
