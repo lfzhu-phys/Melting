@@ -36,7 +36,7 @@ Open the downloaded notebook, modify the potential and element, and execute the 
 
 Approach 2:
 
-Use snakemake to run the notebook. This approach requires an input.json file, which contains the two user-specified parameters, element and interatomic potential, in the following format:
+Use snakemake to run the notebook. This approach requires an input.json file in the following format:
 
 ```json
 {
