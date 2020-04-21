@@ -42,7 +42,7 @@ Use snakemake to run the notebook. This approach requires an input.json file, wh
 {
  "config":   [ "pair_style eam/alloy \n",
                "pair_coeff * * potential Al\n"],
- "filename": ["/home/pyiron/projects/potential"], # an absolute path should be provided
+ "filename": ["/home/pyiron/projects/potential"],
  "species":  ["Al"],
  "element":  "Al"
 }
