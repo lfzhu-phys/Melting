@@ -1,0 +1,11 @@
+channels:
+- conda-forge
+- bioconda
+dependencies:
+- python
+- pyiron
+- lammps
+- nglview
+- ovito
+- jupyterlab
+- snakemake
