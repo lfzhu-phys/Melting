@@ -12,7 +12,7 @@ Please install:
 
 - [pyiron](https://pyiron.github.io/source/installation.html)
 
-- [Ovito](https://anaconda.org/conda-forge/ovito) (Optional: To run *Melting* in a python console)
+- [Ovito](https://anaconda.org/conda-forge/ovito) (To run *Melting* in a python console)
 
 - [snakemake](https://snakemake.readthedocs.io/en/stable/getting_started/installation.html) (Optional: To 
 provide input to the notebook without having to edit it.)
