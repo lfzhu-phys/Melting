@@ -37,10 +37,10 @@ e.g., "~/pyiron/projects/". Two approaches can be used to run it:
 
     ```json
     {
-     "Config":   [ "pair_style eam/alloy \n",
+     "config":   [ "pair_style eam/alloy \n",
                    "pair_coeff * * potential Al\n"],
-     "Filename": ["/home/pyiron/projects/potential"],
-     "Species":  ["Al"],
+     "filename": ["/home/pyiron/projects/potential"],
+     "species":  ["Al"],
      "element":  "Al",
     }
     ```
