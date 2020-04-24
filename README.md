@@ -42,7 +42,6 @@ e.g., "~/pyiron/projects/". Two approaches can be used to run it:
      "Filename": ["/home/pyiron/projects/potential"],
      "Species":  ["Al"],
      "element":  "Al",
-     "crystalstructure": "Fcc"
     }
     ```
     and a Snakefile, which is in the following format:
