@@ -11,9 +11,7 @@ To run the module *Melting*, a linux system is recommended. Under Windows please
 Please install:
 
 - [pyiron](https://pyiron.github.io/source/installation.html)
-
 - [Ovito](https://anaconda.org/conda-forge/ovito) (To run *Melting* in a python console)
-
 - [snakemake](https://snakemake.readthedocs.io/en/stable/getting_started/installation.html) (Optional: To 
 provide input to the notebook without having to edit it.)
 
@@ -59,3 +57,26 @@ e.g., "~/pyiron/projects/". Two approaches can be used to run it:
     
 Both approaches write the estimated melting points and predicted melting points from all loop calculations 
 in a file *melting.json*.
+
+# Acknowledgments
+If you use the melting point protocol in your scientific work, please consider citing:
+```
+  @article{melting-paper,
+    title = {A fully automated approach to determine the melting temperature of crystalline materials},
+    author = {Li-Fang Zhu and Jan Janssen and Shoji Ishibashia and Blazej Grabowskic and Jörg Neugebauer},
+    journal = {in preparation}
+  }
+
+  @article{pyiron-paper,
+    title = {pyiron: An integrated development environment for computational materials science},
+    journal = {Computational Materials Science},
+    volume = {163},
+    pages = {24 - 36},
+    year = {2019},
+    issn = {0927-0256},
+    doi = {https://doi.org/10.1016/j.commatsci.2018.07.043},
+    url = {http://www.sciencedirect.com/science/article/pii/S0927025618304786},
+    author = {Jan Janssen and Sudarsan Surendralal and Yury Lysogorskiy and Mira Todorova and Tilmann Hickel and Ralf Drautz and Jörg Neugebauer},
+    keywords = {Modelling workflow, Integrated development environment, Complex simulation protocols},
+  }
+```
