@@ -19,7 +19,7 @@ conda install -c conda-forge pyiron nglview lammps jupyter scikit-learn ovito ms
 For the installation of pyiron and the configuration of Lammps and NGLview within pyiron please refer to the [pyiron manual](https://pyiron.readthedocs.io/en/latest/source/installation.html).
 
 ## Run the Jupyter Notebook
-You can directly download the Jupyter notebook from this Github repositorry [*script.ipynb*](https://github.com/pyrion/pyrion_meltingpoint/blob/master/scripts/script.ipynb) copy it to your pyiron projects folder and execute it there. In line 10 and 11 the input parameters can be modified to select a custom potential and change parameters of the melting point calculation. After the calculation finished successfully it creates an *melting.json* file which contains the final melting point prediction as well as the intermediate results. 
+You can directly download the Jupyter notebook from this Github repositorry [*script.ipynb*](https://github.com/pyrion/pyrion_meltingpoint/blob/master/scripts/script.ipynb) copy it to your pyiron projects folder and execute it there. In line 10 and 11 the input parameters can be modified to select a custom potential and change parameters of the melting point calculation. After the calculation finished successfully it creates an *output.json* file which contains the final melting point prediction as well as the intermediate results. 
 
 ## Analyse 
 You can analyse the melting point calculation using the [*plot.ipynb*](https://github.com/pyrion/pyrion_meltingpoint/blob/master/scripts/plot.ipynb) notebook. 
@@ -53,9 +53,17 @@ After copying the *input.json* it can be executed using:
 ```
 snakemake --use-conda --cores 1 
 ```
-The parameters defined in the input.json file will overwrite those in the Jupyter notebook. With this approach, there is no need to interfere with all the computational and technical details. 
+The parameters defined in the *input.json* file will overwrite those in the Jupyter notebook. With this approach, there is no need to interfere with all the computational and technical details. 
     
-The results are saved in the *melting.json* file and can be analysed with the *scripts/plot.ipynb* notebook. 
+The results are saved in the *output.json* file and can be analysed with the [*plot.ipynb*](https://github.com/pyrion/pyrion_meltingpoint/blob/master/scripts/plot.ipynb) notebook. 
+
+# FAQ
+## How to run in parallel? 
+I single melting point calculation takes 50-100 CPU hours, so it makes a lot of sense to run the code in parallel. While the protocol itself is written in a serial way, the individual Lammps calculation can be executed in parallel. To enable parallel execution inset the option: 
+```
+"cpu_cores": 8,
+```
+Either in line 10 of the jupyter notebook or in the *input.json* file. When snakemake is used it is not necessary to increase the `--cores` count in the snakemake command. 
 
 # Acknowledgments
 If you use the melting point protocol in your scientific work, please consider citing:
