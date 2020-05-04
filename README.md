@@ -70,7 +70,7 @@ If you use the melting point protocol in your scientific work, please consider c
 ```
   @article{melting-paper,
     title = {A fully automated approach to determine the melting temperature of crystalline materials},
-    author = {Li-Fang Zhu and Jan Janssen and Shoji Ishibashia and Blazej Grabowskic and Jörg Neugebauer},
+    author = {Li-Fang Zhu and Jan Janssen and Shoji Ishibashi and Blazej Grabowski and Jörg Neugebauer},
     journal = {in preparation}
   }
 
