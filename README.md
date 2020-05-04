@@ -65,6 +65,25 @@ A single melting point calculation takes 50-100 CPU hours, so it makes a lot of 
 ```
 Either in line 10 of the jupyter notebook or in the *input.json* file. When snakemake is used it is not necessary to increase the `--cores` count in the snakemake command. 
 
+## How to submit a melting point calculation to the queue? 
+If you execute the notebook in pyiron, you can simply specify the queue in line 10 by adding the option: 
+```
+"queue": <queue_name>,
+```
+With `<queue_name>` the name of the queue the calculation should be submitted to. More details about the queuing system configuration in pyiron is available as part of the [pysqa](https://github.com/pyiron/pysqa) package.
+
+In contrast the `snakemake` command can be directly included in the submit script you usually use to submit calculation to your cluster. Here is an example submit script for the SLRUM queuing system: 
+```
+#!/bin/sh
+#SBATCH --time=00:10:00
+#SBATCH --nodes=1
+#SBATCH --ntasks-per-node=8
+#SBATCH --job-name="melting_point"
+
+snakemake --use-conda --cores 1 
+```
+In addition to specifying the number of cores in the submit script it is also necessary to set the `cpu_cores` option in the *input.json* file as explained above. 
+
 # Acknowledgments
 If you use the melting point protocol in your scientific work, please consider citing:
 ```
