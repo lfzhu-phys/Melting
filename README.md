@@ -59,7 +59,7 @@ The results are saved in the *output.json* file and can be analysed with the [*p
 
 # FAQ
 ## How to run in parallel? 
-I single melting point calculation takes 50-100 CPU hours, so it makes a lot of sense to run the code in parallel. While the protocol itself is written in a serial way, the individual Lammps calculation can be executed in parallel. To enable parallel execution inset the option: 
+A single melting point calculation takes 50-100 CPU hours, so it makes a lot of sense to run the code in parallel. While the protocol itself is written in a serial way, the individual Lammps calculation can be executed in parallel. To enable parallel execution inset the option: 
 ```
 "cpu_cores": 8,
 ```
