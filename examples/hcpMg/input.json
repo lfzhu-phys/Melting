@@ -1,0 +1,9 @@
+{
+    "config": [
+        "pair_style eam/fs \n", 
+        "pair_coeff * * Mg.eam.fs Mg\n"
+    ], 
+    "filename": "./examples/hcpMg/Mg.eam.fs", 
+    "species": ["Mg"], 
+    "element": "Mg"
+}
