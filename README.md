@@ -88,9 +88,15 @@ In addition to specifying the number of cores in the submit script it is also ne
 If you use the melting point protocol in your scientific work, please consider citing:
 ```
   @article{melting-paper,
-    title = {A fully automated approach to determine the melting temperature of crystalline materials},
-    author = {Li-Fang Zhu and Jan Janssen and Shoji Ishibashi and Blazej Grabowski and Jörg Neugebauer},
-    journal = {in preparation}
+    title = {A fully automated approach to calculate the melting temperature of elemental crystals},
+    journal = {Computational Materials Science}
+    volume = {187},
+    pages = {110065},
+    year = {2021},
+    doi = {https://doi.org/10.1016/j.commatsci.2020.110065},
+    url = {https://www.sciencedirect.com/science/article/pii/S0927025620305565},
+    author = {Li-Fang Zhu and Jan Janssen and Shoji Ishibashi and Fritz Körmann and Blazej Grabowski and Jörg Neugebauer},
+    keywords = {Interface method, Melting point, Arbitrary potential, pyiron},
   }
 
   @article{pyiron-paper,
