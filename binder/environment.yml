@@ -6,7 +6,7 @@ dependencies:
 - lammps=2020.03.03=py37_openmpi_2
 - pyiron=0.3.13
 - jupyter=1.0.0
-- papermill=2.1.0
+- papermill=2.2.2
 - scikit-learn=0.23.2
 - nglview=2.7.7
 - mscorefonts=0.0.1
