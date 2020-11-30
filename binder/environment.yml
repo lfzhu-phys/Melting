@@ -3,8 +3,8 @@ channels:
 - bioconda
 dependencies:
 - python=3.9
-- lammps=2020.03.03=py39_openmpi_4
-- pyiron=0.3.17
+- lammps=2020.10.29=py39_openmpi_2
+- pyiron=0.3.18
 - jupyter=1.0.0
 - papermill=2.2.2
 - scikit-learn=0.23.2
