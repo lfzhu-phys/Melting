@@ -1,19 +1,25 @@
 # Introduction
 The [pyiron](http://pyiron.org) based module and Jupyter Notebook *Melting* allow the fully automated computation of melting points of unary crystals for arbitrary interatomic potentials that are compatible with the molecular dynamics engine [LAMMPS](https://lammps.sandia.gov). It is based on the interface method where the evolution of the solid and the liquid phase are monitored as function of temperature. The only mandatory input parameters required are the chemical element and the interatomic potential file. 
 
+# Different Versions 
+The melting point simulation protocol is continously improved based on the feedback from different users. This [repository](https://github.com/pyiron/pyiron_meltingpoint) always includes the latest version, older versions are available as tagged releases. 
+
+* **Version 1.0** - This version was originally published in Computational Materials Science. It uses [ovito](https://www.ovito.org) for structure analysis and supports bcc, fcc and hcp structures. 
+* **Version 1.1** - Adds support for diamond structures. In addition [pyscal](https://pyscal.org) is used for structure analysis, python 3.9 support is added as well as support for Mac OS X. On windows it is recommended to use the linux subsystem for windows. 
+
 # Use the melting point method in pyiron
-[pyiron](http://pyiron.org) is an integrated development environment (IDE) for computational materials science. It was used to develop the melting point protocol and is designed for the development of complex simulation protocols in general. If you are already a pyiron user or want to understand the detailed steps of the melting point method we recommend using the melting point protocol with pyiron. If you are only interested in the calculated melting point values, the snakemake approach explained below might be more suitable for you. Both approaches are limited to the linux operation system and have been successfully tested with the linux subsystem for windows. 
+[pyiron](http://pyiron.org) is an integrated development environment (IDE) for computational materials science. It was used to develop the melting point protocol and is designed for the development of complex simulation protocols in general. If you are already a pyiron user or want to understand the detailed steps of the melting point method we recommend using the melting point protocol with pyiron. If you are only interested in the calculated melting point values, the snakemake approach explained below might be more suitable for you. Both approaches are limited to unix operation systems and have been successfully tested with the linux subsystem for windows. 
 
 ## Installation 
 Please install the following packages: 
 
 - [pyiron](http://pyiron.org)
-- [Ovito](https://ovito.org)
+- [pyscal](https://pyscal.org)
 - [Lammps](https://lammps.sandia.gov)
 
 All packages are available via conda-forge and can be installed with the following command: 
 ```
-conda install -c conda-forge pyiron nglview lammps jupyter scikit-learn ovito mscorefonts
+conda install -c conda-forge pyiron nglview lammps jupyter_client scikit-learn pyscal mscorefonts
 ```
 
 For the installation of pyiron and the configuration of Lammps and NGLview within pyiron please refer to the [pyiron manual](https://pyiron.readthedocs.io/en/latest/source/installation.html).
@@ -29,7 +35,7 @@ In contrast to the pyiron approach snakemake drastically reduces the number of i
 
 Start with installing snakemake from conda: 
 ```
-conda install -c bioconda -c conda-forge snakemake=5.16
+conda install -c bioconda -c conda-forge snakemake=5.30
 ```
 
 Copy one of the *input.json* files from the examples to the root of this directory: 
@@ -110,5 +116,17 @@ If you use the melting point protocol in your scientific work, please consider c
     url = {http://www.sciencedirect.com/science/article/pii/S0927025618304786},
     author = {Jan Janssen and Sudarsan Surendralal and Yury Lysogorskiy and Mira Todorova and Tilmann Hickel and Ralf Drautz and Jörg Neugebauer},
     keywords = {Modelling workflow, Integrated development environment, Complex simulation protocols},
+  }
+  
+  @article{pyscal,
+    author = {Sarath Menon and Grisell Díaz Leines and Jutta Rogal},
+    title = {{pyscal: A python module for structural analysis of atomic environments}},
+    year = 2019,
+    journal = {Journal of Open Source Software},
+    doi = {10.21105/joss.01824},
+    url = {https://doi.org/10.21105/joss.01824},
+    volume = {4},
+    number = {43},
+    page = {1824}
   }
 ```
