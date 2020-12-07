@@ -2,13 +2,12 @@ channels:
 - conda-forge
 - bioconda
 dependencies:
-- python=3.7.6
-- lammps=2020.03.03=py37_openmpi_2
-- pyiron=0.2.13
-- jupyter=1.0.0
-- papermill=2.1.0
-- scikit-learn=0.22.2
-- nglview=2.7.5
-- ovito=2.9.0
+- python=3.9
+- lammps=2020.10.29=py39_openmpi_2
+- pyiron=0.3.18
+- jupyter_client=6.1.7
+- papermill=2.2.2
+- scikit-learn=0.23.2
+- nglview=2.7.7
 - mscorefonts=0.0.1
-- snakemake=5.16.0
+- snakemake=5.29.0

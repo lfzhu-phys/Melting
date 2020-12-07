@@ -1,0 +1,9 @@
+{
+    "config": [
+        "pair_style sw \n", 
+        "pair_coeff * * Si.sw Si\n"
+    ], 
+    "filename": "./examples/diaSi//Si.sw", 
+    "species": ["Si"], 
+    "element": "Si"
+}
