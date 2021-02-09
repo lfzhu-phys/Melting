@@ -31,7 +31,7 @@ You can directly download the Jupyter notebook from this Github repositorry [*sc
 You can analyse the melting point calculation using the [*plot.ipynb*](https://github.com/pyrion/pyrion_meltingpoint/blob/master/scripts/plot.ipynb) notebook. 
 
 # Use the melting point method with snakemake 
-In contrast to the pyiron approach snakemake drastically reduces the number of input parameters available to the user. Snakemake handles the setup of pyiron and the installation of the dependencies via condda. This method is recommended for high throughput calculation as well as automated validation of interatomic potentials. Still it might also be sufficient for users who just want to calculate the melting point for a given interatomic potential. Both approaches are limited to the linux operation system and have been successfully tested with the linux subsystem for windows. 
+In contrast to the pyiron approach snakemake drastically reduces the number of input parameters available to the user. Snakemake handles the setup of pyiron and the installation of the dependencies via conda. This method is recommended for high throughput calculation as well as automated validation of interatomic potentials. Still it might also be sufficient for users who just want to calculate the melting point for a given interatomic potential. Both approaches are limited to the linux operation system and have been successfully tested with the linux subsystem for windows. 
 
 Start with installing snakemake from conda: 
 ```
@@ -78,7 +78,7 @@ If you execute the notebook in pyiron, you can simply specify the queue in line 
 ```
 With `<queue_name>` the name of the queue the calculation should be submitted to. More details about the queuing system configuration in pyiron is available as part of the [pysqa](https://github.com/pyiron/pysqa) package.
 
-In contrast the `snakemake` command can be directly included in the submit script you usually use to submit calculation to your cluster. Here is an example submit script for the SLRUM queuing system: 
+In contrast the `snakemake` command can be directly included in the submit script you usually use to submit calculation to your cluster. Here is an example submit script for the SLURM queuing system: 
 ```
 #!/bin/sh
 #SBATCH --time=00:10:00
