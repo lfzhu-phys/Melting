@@ -4,7 +4,6 @@ channels:
 dependencies:
 - python=3.9
 - lammps=2021.07.30
-- pyiron=0.4.5
 - pyiron_atomistics=0.2.29
 - pyiron_base=0.4.1
 - jupyter_client=7.0.6
