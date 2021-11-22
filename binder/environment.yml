@@ -5,7 +5,7 @@ dependencies:
 - python=3.9
 - lammps=2021.07.30
 - pyiron_atomistics=0.2.29
-- pyiron_base=0.4.1
+- pyiron_base=0.4.2
 - jupyter_client=7.0.6
 - papermill=2.3.3
 - scikit-learn=1.0.1
