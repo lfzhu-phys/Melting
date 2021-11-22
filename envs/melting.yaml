@@ -9,3 +9,4 @@ dependencies:
 - scikit-learn=0.23.2
 - nglview=2.7.7
 - mscorefonts=0.0.1
+- numpy=1.19.5
