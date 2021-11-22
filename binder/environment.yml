@@ -11,3 +11,4 @@ dependencies:
 - nglview=2.7.7
 - mscorefonts=0.0.1
 - snakemake=5.29.0
+- numpy=1.19.5
